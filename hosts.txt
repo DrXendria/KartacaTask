@@ -1,0 +1,7 @@
+#/srv/salt/hosts/hosts.txt dosya yolu bu olmalıdır.
+
+127.0.0.1       localhost
+127.0.1.1       {{ grains['fqdn'] }}   {{ grains['hostname'] }}
+{% for i in range(128, 144) %}
+192.168.168.{{ i }}     kartaca.local
+{% endfor %}
